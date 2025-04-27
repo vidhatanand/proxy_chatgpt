@@ -5,21 +5,20 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "proxy_chatgpt"
 version = "0.1.0"
-description = "A macOS Safari/Chrome automation layer for ChatGPT-like usage"
+description = "macOS Safari/Chrome automation for ChatGPT"
 authors = [
-    { name = "Your Name", email = "you@example.com" }
-]
-license = "MIT"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License"
+    { name = "Vid", email = "vidhatanand@gmail.com" }
 ]
 
-# The only external library used is Beautiful Soup
+# Use either a simple string or a PEP 639 table for the license
+license = "MIT"
+# license = { text = "MIT" }  # Alternatively
+
+classifiers = [
+  "Programming Language :: Python :: 3"
+  # DO NOT put "License :: OSI Approved :: MIT License" here
+]
+
 dependencies = [
     "beautifulsoup4>=4.6"
 ]
-
-[project.urls]
-"Source" = "https://github.com/vidhatanand/proxy_chatgpt"
-"Tracker" = "https://github.com/vidhatanand/proxy_chatgpt/issues"
