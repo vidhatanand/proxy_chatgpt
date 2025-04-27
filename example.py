@@ -40,7 +40,7 @@ def old_chat_example():
     by specifying the known chat_id, then prints the chat ID and the response.
     """
     # Replace with your actual existing chat ID
-    existing_chat_id = "68077030-8c80-800d-a020-898bb641dff4"
+    existing_chat_id = "680e430b-d554-8003-92ad-362c567e1975"
     chat = ChatGPT(window_geometry=(0, 0, 700, 900))
 
     prompt_text = "We were discussing quantum physics. Can you continue from where we left off?"
@@ -61,8 +61,8 @@ def old_chat_example():
 
 def main():
     # Run both examples in sequence
-    start_new_chat_example()
-    #old_chat_example()
+    #start_new_chat_example()
+    old_chat_example()
 
 if __name__ == "__main__":
     main()
