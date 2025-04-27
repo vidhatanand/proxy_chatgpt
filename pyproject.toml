@@ -7,18 +7,16 @@ name = "proxy_chatgpt"
 version = "0.1.0"
 description = "macOS Safari/Chrome automation for ChatGPT"
 authors = [
-    { name = "Vid", email = "vidhatanand@gmail.com" }
+  {name = "Vid", email = "vid@example.com"}
 ]
-
-# Use either a simple string or a PEP 639 table for the license
 license = "MIT"
-# license = { text = "MIT" }  # Alternatively
-
 classifiers = [
   "Programming Language :: Python :: 3"
-  # DO NOT put "License :: OSI Approved :: MIT License" here
+]
+dependencies = [
+  "beautifulsoup4>=4.6"
 ]
 
-dependencies = [
-    "beautifulsoup4>=4.6"
-]
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["example.py", "tests*", "build*", "dist*", ".*"]
