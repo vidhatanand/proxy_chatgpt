@@ -6,15 +6,31 @@ build-backend = "setuptools.build_meta"
 name = "proxy_chatgpt"
 version = "0.1.0"
 description = "macOS Safari/Chrome automation for ChatGPT"
+readme = "README.md"
+requires-python = ">=3.10"
 authors = [
-  {name = "Vid", email = "vid@example.com"}
+  { name = "Vid", email = "vid@example.com" }
 ]
-license = "MIT"
+license = { text = "MIT" }
 classifiers = [
-  "Programming Language :: Python :: 3"
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Operating System :: MacOS"
 ]
+
+# Core run-time deps for the existing wrapper
 dependencies = [
   "beautifulsoup4>=4.6"
+]
+
+# Extras group that turns the package into an OpenAI-compatible API server
+[project.optional-dependencies]
+api = [
+  "fastapi>=0.111",
+  "uvicorn[standard]>=0.29",
+  "pydantic>=2.7"
 ]
 
 [tool.setuptools.packages.find]

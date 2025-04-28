@@ -1,0 +1,28 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific settings
+.vscode/
+.idea/
+*.swp
