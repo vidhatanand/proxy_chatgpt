@@ -96,5 +96,5 @@ def chat_completions(
     # --- shape the OpenAI-style response --- #
     return ChatCompletionResponse(
         model=body.model,
-        choices=[Choice(index=0, message=Message(role="assistant", content=answer))],
+        choices=[Choice(index=0, message=Message(role="user", content=answer))],
     )

@@ -1,14 +1,12 @@
 """
-proxy_chatgpt package
+gpt package public API.
 
-This __init__.py makes Python treat the proxy_chatgpt directory as a package.
-You can add import shortcuts here if you like, e.g.:
-
-from .main import GPT
-
-__all__ = ["GPT"]
+- `ChatGPT`  : high-level Safari automation wrapper
+- `api_app`  : FastAPI adapter that turns the local Safari driver into an
+               OpenAI-compatible `/v1/chat/completions` endpoint
 """
 
-# If you'd like users to import GPT directly from `proxy_chatgpt`, uncomment:
-# from .main import GPT
-# __all__ = ["GPT"]
+from .init import ChatGPT                # existing export
+from .openai_compat import app as api_app  # NEW export
+
+__all__: list[str] = ["ChatGPT", "api_app"]
